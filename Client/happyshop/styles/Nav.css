@@ -1,0 +1,33 @@
+
+.logo {
+    width: 50px;
+    float: right;
+    position: relative;
+    right: 900px;
+    top: -5px;
+}
+
+
+
+.logo_admin {
+    width: 50px;
+    float: right;
+    position: relative;
+    right: 970px;
+    top: -5px;
+}
+
+.admin- {
+   
+    cursor: pointer;
+    padding: 5px;
+    background-color: #7E3095;
+    position: relative;
+    left:250px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+}
