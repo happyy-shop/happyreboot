@@ -171,18 +171,7 @@ export default function Navbar() {
     </div>
     <div className="row px-xl-5">
       <div className="col-lg-3 d-none d-lg-block">
-        <a
-          className="btn d-flex align-items-center justify-content-between bg-primary w-100"
-          data-toggle="collapse"
-          href="#navbar-vertical"
-          style={{ height: 65, padding: "0 30px" }}
-        >
-          <h6 className="text-dark m-0">
-            <i className="fa fa-bars mr-2" />
-            Categories
-          </h6>
-          <i className="fa fa-angle-down text-dark" />
-        </a>
+       
         <nav
           className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light"
           id="navbar-vertical"
@@ -267,6 +256,12 @@ export default function Navbar() {
               </li>
               <li className="active">
                 <Link href='/' >Hhhhh</Link>
+              </li>
+              <li className="active">
+                <Link href='/Profile' >profile</Link>
+              </li>
+              <li className="active">
+                <Link href='/AllProducts' >Allproduct</Link>
               </li>
               <a href="detail.html" className="nav-item nav-link">
                 Shop Detail
