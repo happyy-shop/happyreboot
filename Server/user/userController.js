@@ -104,7 +104,15 @@ exports.login = async function (req, res, next) {
       res.status(401).json(error);
     }
   };
-
+exports.updateUser = async (req, res) => {
+  const update = await users.findByIdAndUpdate(req.params.id, req.body);
+  try {
+    res.status(201).send(update);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+  
+};
  
 // const login = async (req, res)=> {
 //   try {
