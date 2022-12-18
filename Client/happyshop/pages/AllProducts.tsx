@@ -8,22 +8,21 @@ import Navbar from "./Navbar";
 import Link from "next/link";
 import ProductDetails from "./[id]";
 import axios from "axios";
-// import Aside from "./aside";
-
+import Sidebar from "./sidebar";
 export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch("http://localhost:4000/product");
   const data = await response.json();
   return {
     props: {
-      data,
+      dataAPI:data,
     },
   };
 };
 
-export default function AllProducts({ data }) {
+export default function AllProducts({ dataAPI }) {
   const router = useRouter();
-
-  const [cartProducts, setCartProducts] = useState([]);
+  const [data, setData] = useState(dataAPI) 
+   const [cartProducts, setCartProducts] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
 
   //   const [data, setData] = useState([])
@@ -72,12 +71,10 @@ export default function AllProducts({ data }) {
 
   return (
     <div>
-      <Navbar />
-      {/* <Aside /> */}
-      <div className="grid-container">
+<Sidebar setData={setData}/>      <div className="grid-container">
         {data.map((element: any) => {
           return (
-            <div className="row">
+            <div className="row" key={element.id}>
               <div className="col-md-3 col-sm-6">
                 <div className="product-grid">
                   <div className="product-image">
@@ -122,7 +119,7 @@ export default function AllProducts({ data }) {
           );
         })}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

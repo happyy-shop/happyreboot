@@ -56,7 +56,7 @@ export default function AllProducts({ data }) {
       <div className="grid-container">
         {data.map((element: any) => {
           return (
-            <div className="row">
+            <div className="row" key={element.id}>
               <div className="col-md-3 col-sm-6">
                 <div className="product-grid">
                   <div className="product-image">

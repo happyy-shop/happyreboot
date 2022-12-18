@@ -6,6 +6,7 @@ export default function Home() {
     <>
     <div>
               <Carousel>
+                
                   <div>
                       <img src="https://res.cloudinary.com/dqmhtibfm/image/upload/v1671285641/happyshop/carousel-1_mt7jow.jpg" alt="image1"/>
   
