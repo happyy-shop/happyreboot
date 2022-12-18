@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import Sidebar from "./sidebar";
 import { GoX } from "react-icons/go";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -38,6 +39,8 @@ export default function Card() {
   return (
     <div>
       <Navbar />
+  <Sidebar/>
+
       <div>
         <button
           className="btn hero-btn"

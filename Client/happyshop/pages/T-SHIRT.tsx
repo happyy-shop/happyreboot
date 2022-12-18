@@ -8,6 +8,8 @@ import axios from "axios";
 import Link from "next/link";
 import ProductDetails from "./[id]";
 // import Aside from "./aside";
+import Sidebar from "./sidebar";
+
 
 export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch("http://localhost:4000/product");
@@ -61,12 +63,13 @@ export default function AllProducts({ data  }) {
 
   return (
     <div>
-      <Navbar  />
+      {/* <Navbar  /> */}
       {/* <Aside /> */}
+      <Sidebar/>
       <div className="grid-container">
         {filter.map((element: any) => {
           return (
-            <div className="row">
+            <div className="row" key={element.id}>
               <div className="col-md-3 col-sm-6">
                 <div className="product-grid">
                   <div className="product-image">
