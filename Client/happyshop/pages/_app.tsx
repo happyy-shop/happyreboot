@@ -5,8 +5,8 @@ import Sidebar from "./sidebar";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import type { AppProps } from 'next/app'
-import Layout from './layout'
+// import type { AppProps } from 'next/app'
+// import Layout from './layout'
 import jwt from 'jwt-decode'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -40,7 +40,7 @@ else if(user.admin==true && ( (["/admin"].includes(appProps.router.pathname)))) 
     </Layout>
   );
 } 
-else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) || (["/Profile"].includes(appProps.router.pathname)))   
+else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) || (["/Profile"].includes(appProps.router.pathname)) || (["/AllProducts"].includes(appProps.router.pathname)))   
     return (
       <Layout>
         <Component {...pageProps} />{" "}

@@ -14,15 +14,15 @@ export const getStaticProps: GetStaticProps = async () => {
   const data = await response.json();
   return {
     props: {
-      dataAPI:data,
+      dataAPI: data,
     },
   };
 };
 
 export default function AllProducts({ dataAPI }) {
   const router = useRouter();
-  const [data, setData] = useState(dataAPI) 
-   const [cartProducts, setCartProducts] = useState([]);
+  const [data, setData] = useState(dataAPI);
+  const [cartProducts, setCartProducts] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
 
   //   const [data, setData] = useState([])
@@ -71,7 +71,8 @@ export default function AllProducts({ dataAPI }) {
 
   return (
     <div>
-<Sidebar setData={setData}/>      <div className="grid-container">
+      <Sidebar setData={setData} />{" "}
+      <div className="grid-container">
         {data.map((element: any) => {
           return (
             <div className="row" key={element.id}>
