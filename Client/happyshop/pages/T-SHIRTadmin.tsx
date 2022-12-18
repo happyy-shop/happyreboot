@@ -62,8 +62,6 @@ export default function AllProducts({ data  }) {
 
   return (
     <div>
-      <NavbarAdmin />
-      {/* <Aside /> */}
       <div className="grid-container">
         {filter.map((element: any) => {
           return (
