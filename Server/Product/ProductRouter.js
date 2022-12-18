@@ -1,7 +1,4 @@
 const router = require("express").Router();
-const post = require("./ProductSchema.js");
-const auth = require("../middleware/auth");
-const admin = require("../middleware/admin");
 const {
   getAll,
   getOne,

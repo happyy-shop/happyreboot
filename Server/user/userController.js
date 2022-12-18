@@ -112,7 +112,8 @@ exports.updateUser = async (req, res) => {
     res.status(500).send(error);
   }
   
-};
+}; 
+
  
 // const login = async (req, res)=> {
 //   try {

@@ -1,6 +1,4 @@
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import Layout from "./layout";
 import Sidebar from "./sidebar";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -33,14 +31,14 @@ useEffect (()=> {
 
   const getContent = () => {
     if (!user && (["/"].includes(appProps.router.pathname))){ return <Component {...pageProps} />;}
-else if(user.admin==true && ( (["/admin"].includes(appProps.router.pathname)))) { 
+else if(user.admin==true && ( (["/HomeAdmin"].includes(appProps.router.pathname)) || (["/AllProductAdmin"].includes(appProps.router.pathname)) || (["/jeansadmin"].includes(appProps.router.pathname))  || (["/shoesadmin"].includes(appProps.router.pathname)) || (["/T-SHIRTadmin"].includes(appProps.router.pathname)) || (["/AddProduct"].includes(appProps.router.pathname)))) { 
   return (
     <Layout>
       <Component {...pageProps} />{" "}
     </Layout>
   );
 } 
-else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) || (["/Profile"].includes(appProps.router.pathname)))   
+else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) || (["/Profile"].includes(appProps.router.pathname))|| (["/Card"].includes(appProps.router.pathname)))   
     return (
       <Layout>
         <Component {...pageProps} />{" "}
