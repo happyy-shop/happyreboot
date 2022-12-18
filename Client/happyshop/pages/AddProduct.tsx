@@ -33,9 +33,6 @@ export default function AddProduct() {
 
   return (
     <div>
-      <div>
-        <NavbarAdmin />
-      </div>
       <center>
         <div className="form">
           <div className="title">Welcome Admin</div>

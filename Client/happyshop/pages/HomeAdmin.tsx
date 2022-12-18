@@ -1,18 +1,20 @@
-
+import Link from "next/link";
 import React from "react";
-import Footer from "./Footer";
-
-import NavbarAdmin from "./NavbarAdmin";
-import Slider from "./Slider";
-
 export default function HomeAdmin() {
   return (
     <div>
-      <div>
-        <NavbarAdmin />
-        <Slider />
-        <Footer />
-      </div>
+     <li className="active">
+                <Link href='/AllProductAdmin' >AllProductAdmin</Link>
+              </li>
+              <li className="active">
+                <Link href='/jeansadmin' >jeansadmin</Link>
+              </li>
+              <li className="active">
+                <Link href='/shoesadmin' >shoesadmin</Link>
+              </li>
+              <li className="active">
+                <Link href='/T-SHIRTadmin' >T-SHIRTadmin</Link>
+              </li>
     </div>
   );
 }

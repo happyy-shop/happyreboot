@@ -48,7 +48,7 @@ export default function AllProducts({ data }) {
 
   return (
     <div>
-      <NavbarAdmin />
+     
       <Link href="AddProduct">
         <button className="button_add">Add Product </button>
       </Link>
