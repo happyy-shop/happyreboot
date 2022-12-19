@@ -13,14 +13,14 @@ export const getStaticProps: GetStaticProps = async () => {
   const data = await response.json();
   return {
     props: {
-      dataAPI: data,
+      dataApi: data,
     },
   };
 };
 
-export default function AllProducts({ dataAPI }) {
+export default function AllProducts({ dataApi }) {
   const router = useRouter();
-  const [data, setData] = useState(dataAPI);
+  const [data, setData] = useState(dataApi);
   const [cartProducts, setCartProducts] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
 
@@ -72,7 +72,6 @@ export default function AllProducts({ dataAPI }) {
                     <a className="image">
                       <img className="pic-1" src={element.imageUrl} />
                     </a>
-                    <span className="product-discount-label">-33%</span>
                     <ul className="product-links"></ul>
                   </div>
                   <div className="product-content">
