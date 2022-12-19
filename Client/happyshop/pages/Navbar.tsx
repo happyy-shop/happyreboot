@@ -116,57 +116,7 @@ export default function Navbar() {
             className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light"
             id="navbar-vertical"
             style={{ width: "calc(100% - 30px)", zIndex: 999 }}
-          >
-            <div className="navbar-nav w-100">
-              <div className="nav-item dropdown dropright">
-                <a
-                  href="#"
-                  className="nav-link dropdown-toggle"
-                  data-toggle="dropdown"
-                >
-                  Dresses <i className="fa fa-angle-right float-right mt-1" />
-                </a>
-                <div className="dropdown-menu position-absolute rounded-0 border-0 m-0">
-                  <a href="" className="dropdown-item">
-                    Men's Dresses
-                  </a>
-                  <a href="" className="dropdown-item">
-                    Women's Dresses
-                  </a>
-                  <a href="" className="dropdown-item">
-                    Baby's Dresses
-                  </a>
-                </div>
-              </div>
-              <a href="" className="nav-item nav-link">
-                Shirts
-              </a>
-              <a href="" className="nav-item nav-link">
-                Jeans
-              </a>
-              <a href="" className="nav-item nav-link">
-                Swimwear
-              </a>
-              <a href="" className="nav-item nav-link">
-                Sleepwear
-              </a>
-              <a href="" className="nav-item nav-link">
-                Sportswear
-              </a>
-              <a href="" className="nav-item nav-link">
-                Jumpsuits
-              </a>
-              <a href="" className="nav-item nav-link">
-                Blazers
-              </a>
-              <a href="" className="nav-item nav-link">
-                Jackets
-              </a>
-              <a href="" className="nav-item nav-link">
-                Shoes
-              </a>
-            </div>
-          </nav>
+          ></nav>
         </div>
         <div className="col-lg-9">
           <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
@@ -190,42 +140,16 @@ export default function Navbar() {
               className="collapse navbar-collapse justify-content-between"
               id="navbarCollapse"
             >
-              <div className="navbar-nav mr-auto py-0">
-                <li className="active">
-                  <Link href="/Home">Home</Link>
-                </li>
-                <li className="active">
-                  <Link href="/">Hhhhh</Link>
-                </li>
-                <li className="active">
-                  <Link href="/Profile">profile</Link>
-                </li>
-                <li className="active">
-                  <Link href="/AllProducts">Allproduct</Link>
-                </li>
-                <a href="detail.html" className="nav-item nav-link">
-                  Shop Detail
-                </a>
-                <div className="nav-item dropdown">
-                  <a
-                    href="#"
-                    className="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                  >
-                    Pages <i className="fa fa-angle-down mt-1" />
-                  </a>
-                  <div className="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                    <a href="cart.html" className="dropdown-item">
-                      Shopping Cart
-                    </a>
-                    <a href="checkout.html" className="dropdown-item">
-                      Checkout
-                    </a>
-                  </div>
-                </div>
-                <a href="contact.html" className="nav-item nav-link">
-                  Contact
-                </a>
+             <div className="navbar-nav mr-auto py-0">
+                <Link href="/Home" className="nav-item nav-link">
+                  Home
+                </Link>
+                <Link href="/AllProducts" className="nav-item nav-link">
+                  AllProducts
+                </Link>
+                <Link href="/Profile" className="nav-item nav-link">
+                  Profile
+                </Link>
               </div>
               <div className="navbar-nav ml-auto py-0 d-none d-lg-block">
                 <a href="" className="btn px-0">
