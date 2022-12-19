@@ -7,6 +7,7 @@ import { GetStaticProps } from "next";
 import Link from "next/link";
 import axios from "axios";
 import Sidebar from "./sidebar";
+import Search from "./Search";
 
 export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch("http://localhost:4000/product");
@@ -60,7 +61,7 @@ export default function AllProducts({ dataApi }) {
 
   return (
     <div>
-     
+      <Search/>
       <div className="grid-container">
       <Sidebar setData={setData} />{" "}
         {data?.map((element: any) => {

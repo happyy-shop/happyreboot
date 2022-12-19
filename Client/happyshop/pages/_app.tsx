@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import "../styles/globals.css";
 import "../styles/Login.css";
 import "../styles/Footer.css";
 import "../styles/Slider.css";

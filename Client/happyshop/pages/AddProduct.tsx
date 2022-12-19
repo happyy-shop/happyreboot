@@ -129,13 +129,12 @@ export default function AddProduct() {
             </label>
           </div>
 
-          <button className="submit" onClick={() => add()}>
+          <button className="submit11" onClick={() => add()}>
             submit
           </button>
         </div>
       </center>
       <div>
-        <Footer />
       </div>
     </div>
   );

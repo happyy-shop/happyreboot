@@ -50,7 +50,7 @@ export default function AllProducts({ data }) {
     <div>
      
       <Link href="AddProduct">
-        <button className="button_add">Add Product </button>
+        <button className="button_add1">Add Product </button>
       </Link>
 
       <div className="grid-container">
@@ -94,7 +94,6 @@ export default function AllProducts({ data }) {
                       <>{element.productName}</>
                     </h3>
                     <div className="price">{element.price} DT</div>
-                    <a className="add-to-cart">add to cart</a>
                   </div>
                 </div>
               </div>
@@ -102,7 +101,6 @@ export default function AllProducts({ data }) {
           );
         })}
       </div>
-      <Footer />
     </div>
   );
 }

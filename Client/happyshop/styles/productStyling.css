@@ -30,7 +30,7 @@
 
 .product-grid .product-discount-label {
     color: #fff;
-    background: #5e2ced;
+    background:yellow;
     font-size: 14px;
     font-weight: 100;
     text-transform: uppercase;
@@ -80,7 +80,7 @@
 
 .product-grid .product-links li a:hover {
     color: #fff;
-    background: #5e2ced;
+    background: yellow;
     box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -128,7 +128,7 @@
 }
 
 .product-grid .rating li {
-    color: #5e2ced;
+    color:rgb(166, 166, 128);
     font-size: 14px;
 }
 
@@ -149,11 +149,11 @@
 }
 
 .product-grid .title a:hover {
-    color: #5e2ced
+    color: rgb(166, 166, 128)
 }
 
 .product-grid .price {
-    color: #5e2ced;
+    color: black;
     font-size: 17px;
     font-weight: 600;
     display: block;
@@ -161,7 +161,7 @@
 }
 
 .product-grid .price span {
-    color: #5e2ced;
+    color: black;
     font-weight: 500;
     text-decoration: line-through;
 }
@@ -172,7 +172,7 @@
 
 .product-grid .add-to-cart {
     color: #fff;
-    background-color: #5e2ced;
+    background-color:rgb(166, 166, 128);
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
