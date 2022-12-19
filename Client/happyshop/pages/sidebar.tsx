@@ -1,4 +1,6 @@
+import { type } from "os";
 import React, { useState } from "react";
+// import "../styles/sidebar.css";
 
 type T = { setData: any };
 
@@ -8,7 +10,7 @@ const Sidebar = ({ setData }: T) => {
 
   const FilterHandler = () => {
     setData((prev: any) =>
-      prev.filter((item: any) => item.price > priceFrom || item.price < priceTo)
+      prev.filter((item: any) => item.price > priceFrom && item.price < priceTo)
     );
   };
 
