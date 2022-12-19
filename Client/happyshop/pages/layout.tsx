@@ -2,7 +2,7 @@ import Navbar from "./Navbar"
 import Footer from "./Footer"
 import Sidebar from "./sidebar"
 
-const Layout = ({ children }) => {
+const Layout = ({ children }:any) => {
   return (
     <div className="content">
       <Navbar />

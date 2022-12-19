@@ -1,9 +1,22 @@
 import "../styles/globals.css";
-import Sidebar from "./sidebar";
+import "../styles/globals.css";
+import "../styles/Login.css";
+import "../styles/Footer.css";
+import "../styles/Slider.css";
+import "../styles/productStyling.css";
+import "../styles/ProductDetails.css";
+import "../styles/Nav.css";
+import "../styles/cardstyle.css";
+import "../styles/aside.css";
+import "../styles/edit.css";
+import "../styles/addProduct.css";
+import "../styles/aside.css";
+import "../styles/style.css";
+import "../styles/team.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import type { AppProps } from 'next/app'
+// import type { AppProps } from 'next/app'
 import Layout from './layout'
 import jwt from 'jwt-decode'
 import { useEffect, useState } from 'react'
@@ -38,7 +51,7 @@ else if(user.admin==true && ( (["/HomeAdmin"].includes(appProps.router.pathname)
     </Layout>
   );
 } 
-else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) || (["/Profile"].includes(appProps.router.pathname))|| (["/Card"].includes(appProps.router.pathname)))   
+else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) ||(["/AllProducts"].includes(appProps.router.pathname)) ||(["/jeans"].includes(appProps.router.pathname))||(["/shoes"].includes(appProps.router.pathname))||(["/T-SHIRT"].includes(appProps.router.pathname))|| (["/Profile"].includes(appProps.router.pathname))|| (["/Card"].includes(appProps.router.pathname)))   
     return (
       <Layout>
         <Component {...pageProps} />{" "}
