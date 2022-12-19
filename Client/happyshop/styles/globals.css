@@ -248,3 +248,18 @@ a {
   background-color: beige;
   color: black;
 }
+.signup{ 
+  width: 400px;
+  min-height: 250px;
+  margin: auto;
+  margin-top: 10px;
+  border: 1px solid #77777769;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  padding: 20px 60px;
+  box-shadow: 0 0 1em #80808066;
+  margin-left: 700px;
+}
+.active1{
+  margin-top: 80px;
+}

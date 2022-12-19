@@ -2,6 +2,7 @@
 import React,{useState} from 'react'
 import axios from 'axios'
 import jwt from 'jwt-decode'
+import Link from 'next/link'
 const signup = () => {
     const [username,setUsername]=useState('')
     const [email,setEmail]=useState('')
@@ -14,24 +15,8 @@ const signup = () => {
         } ).catch(err=>alert(err)
         )
     } 
-    const SignIn=(body)=>{
-        axios.post('http://localhost:4000/users/login',body).then(res=>{
-          localStorage.setItem("token", res.data)
-          window.location.href='/Home'
-
-        }
-        ).catch(err=>alert(err)
-        )
-    } 
-    const SignInAdmin=(body)=>{
-      axios.post('http://localhost:4000/users/login',body).then(res=>{
-        localStorage.setItem("token", res.data)
-        window.location.href='/HomeAdmin'
-
-      }
-      ).catch(err=>alert(err)
-      )
-  }
+   
+   
   return (
     <>
  
@@ -45,16 +30,14 @@ const signup = () => {
         {/* Introduction */}
         <div  className="col-md-6 ccol-4">
           <h1>Happy-Shop</h1>
+
           
         </div>
         {/* Sign Up */}
-       <center> <div className="col-md-5 col-md-offset-1">
+      <center>  <div className="signup">
           {/* <form className="signup-form"> */}
-            <h2 className="text-center">Signup Now</h2>
-            <hr />
-            <div className="form-group">
-            
-            </div>
+           <h2 className="text-center">Signup Now</h2>
+           
             <div className="form-group">
               <input
               onChange={e=>setEmail(e.target.value)}
@@ -87,60 +70,16 @@ const signup = () => {
             <div className="form-group text-center">
               <button onClick={()=>signup({username,password,email})} className="btn btn-outline-light">
                 SignUp
-              </button> 
-              <h2 className="text-center">SignIn Now</h2>
-            <hr /> 
-              <div className="form-group">
-              <input
-              onChange={e=>setEmail(e.target.value)}
-                type="email"
-                className="form-control"
-                placeholder="Email Address"
-               
-              />
+              </button>  
             </div>
-          
-            <div className="form-group">
-              <input
-              onChange={e=>setPassword(e.target.value)}
-
-                type="text"
-                className="form-control"
-                placeholder="Password"
-               
-              />
-            </div>
-              <button onClick={()=>SignIn({password,email})} className="btn btn-outline-light">
-                SignIn
-              </button>
-              <h2 className="text-center">SignIn Admin</h2>
-            <hr /> 
-              <div className="form-group">
-              <input
-              onChange={e=>setEmail(e.target.value)}
-                type="email"
-                className="form-control"
-                placeholder="Email Address"
-               
-              />
-            </div>
-          
-            <div className="form-group">
-              <input
-              onChange={e=>setPassword(e.target.value)}
-
-                type="text"
-                className="form-control"
-                placeholder="Password"
-               
-              />
-            </div>
-              <button onClick={()=>SignInAdmin({password,email})} className="btn btn-outline-light">
-                SignIn
-              </button>
-            </div>
-          
-        </div></center>
+            <div className='active1'> <h4>already have an account ?</h4><button >
+                  <Link href="/loginUser">Login User</Link>
+                </button> 
+                <button >
+                  <Link href="/loginAdmin">Login Admin</Link>
+                </button></div> 
+        </div> 
+        </center> 
         <img src="https://res.cloudinary.com/dqmhtibfm/image/upload/c_scale,h_600,w_1940/v1670924684/aka/hero/hero-2_j083pl.jpg" alt="image1"/>
       </div>
     </div>
