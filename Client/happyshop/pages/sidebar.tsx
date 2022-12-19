@@ -1,6 +1,4 @@
-import { type } from "os";
 import React, { useState } from "react";
-// import "../styles/sidebar.css";
 
 type T = { setData: any };
 
