@@ -2,13 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { GetStaticPaths, GetStaticProps } from "next";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+import { GetStaticProps } from "next";
+
 import Link from "next/link";
-import ProductDetails from "./[id]";
 import axios from "axios";
 import Sidebar from "./sidebar";
+
 export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch("http://localhost:4000/product");
   const data = await response.json();
@@ -24,16 +23,6 @@ export default function AllProducts({ dataAPI }) {
   const [data, setData] = useState(dataAPI);
   const [cartProducts, setCartProducts] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
-
-  //   const [data, setData] = useState([])
-  //   useEffect(() => {
-  //     axios
-  //       .get("http://localhost:4000/product")
-  //       .then((res) => {
-  //         setData(res.data);
-  //       })
-  //       .catch((err) => console.log(err));
-  //   }, []);
 
   console.log(cartProducts);
 
@@ -71,9 +60,10 @@ export default function AllProducts({ dataAPI }) {
 
   return (
     <div>
-      <Sidebar setData={setData} />{" "}
+     
       <div className="grid-container">
-        {data.map((element: any) => {
+      <Sidebar setData={setData} />{" "}
+        {data?.map((element: any) => {
           return (
             <div className="row" key={element.id}>
               <div className="col-md-3 col-sm-6">
@@ -83,13 +73,7 @@ export default function AllProducts({ dataAPI }) {
                       <img className="pic-1" src={element.imageUrl} />
                     </a>
                     <span className="product-discount-label">-33%</span>
-                    <ul className="product-links">
-                      {/* <li>
-                        <a href="#" data-tip="Compare">
-                          <i className="fa fa-random" />
-                        </a>
-                      </li> */}
-                    </ul>
+                    <ul className="product-links"></ul>
                   </div>
                   <div className="product-content">
                     <h3 className="title">
