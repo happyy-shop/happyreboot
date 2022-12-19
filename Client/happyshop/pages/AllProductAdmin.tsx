@@ -63,7 +63,7 @@ export default function AllProducts({ data }) {
                     <a className="image">
                       <img className="pic-1" src={element.imageUrl} />
                     </a>
-                    <span className="product-discount-label">-33%</span>
+                   
                     <ul className="product-links">
                       <li>
                         <a
