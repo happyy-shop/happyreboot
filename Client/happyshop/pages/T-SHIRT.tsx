@@ -16,14 +16,14 @@ export const getStaticProps: GetStaticProps = async () => {
   const data = await response.json();
   return {
     props: {
-      data,
+      dataApi :data,
     },
   };
 };
 
-export default function AllProducts({ data  }) {
+export default function AllProducts({ dataApi  }) {
   const router = useRouter();
-
+  const [data, setData] = useState(dataApi);
   const [cartProducts, setCartProducts] = useState([]);
   const [cartTotal, setCartTotal] = useState(0); 
   const filter = data.filter((e)=> e.category === "T-SHIRT") 
@@ -65,7 +65,7 @@ export default function AllProducts({ data  }) {
     <div>
       {/* <Navbar  /> */}
       {/* <Aside /> */}
-      <Sidebar/>
+      <Sidebar setData={setData}/>
       <div className="grid-container">
         {filter.map((element: any) => {
           return (
@@ -76,7 +76,6 @@ export default function AllProducts({ data  }) {
                     <a className="image">
                       <img className="pic-1" src={element.imageUrl} />
                     </a>
-                    <span className="product-discount-label">-33%</span>
                     <ul className="product-links">
                       <li>
                         <Link href={`${element._id}`}>

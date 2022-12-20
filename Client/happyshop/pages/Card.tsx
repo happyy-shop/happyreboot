@@ -38,8 +38,7 @@ export default function Card() {
 
   return (
     <div>
-      <Navbar />
-  <Sidebar/>
+  
 
       <div>
         <button
@@ -159,8 +158,6 @@ export default function Card() {
           )}{" "}
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

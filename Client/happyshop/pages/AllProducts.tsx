@@ -7,20 +7,21 @@ import { GetStaticProps } from "next";
 import Link from "next/link";
 import axios from "axios";
 import Sidebar from "./sidebar";
+import Search from "./Search";
 
 export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch("http://localhost:4000/product");
   const data = await response.json();
   return {
     props: {
-      dataAPI: data,
+      dataApi: data,
     },
   };
 };
 
-export default function AllProducts({ dataAPI }) {
+export default function AllProducts({ dataApi }) {
   const router = useRouter();
-  const [data, setData] = useState(dataAPI);
+  const [data, setData] = useState(dataApi);
   const [cartProducts, setCartProducts] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
 
@@ -60,7 +61,7 @@ export default function AllProducts({ dataAPI }) {
 
   return (
     <div>
-     
+      <Search/>
       <div className="grid-container">
       <Sidebar setData={setData} />{" "}
         {data?.map((element: any) => {
@@ -72,7 +73,6 @@ export default function AllProducts({ dataAPI }) {
                     <a className="image">
                       <img className="pic-1" src={element.imageUrl} />
                     </a>
-                    <span className="product-discount-label">-33%</span>
                     <ul className="product-links"></ul>
                   </div>
                   <div className="product-content">

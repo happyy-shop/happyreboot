@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import "../styles/globals.css";
 import "../styles/Login.css";
 import "../styles/Footer.css";
 import "../styles/Slider.css";
@@ -46,12 +45,12 @@ useEffect (()=> {
     if (!user && (["/"].includes(appProps.router.pathname))  ||(["/loginUser"].includes(appProps.router.pathname))  ||(["/loginAdmin"].includes(appProps.router.pathname))){ return <Component {...pageProps} />;}
 else if(user.admin==true && ( (["/HomeAdmin"].includes(appProps.router.pathname)) || (["/AllProductAdmin"].includes(appProps.router.pathname)) || (["/jeansadmin"].includes(appProps.router.pathname))  || (["/shoesadmin"].includes(appProps.router.pathname)) || (["/T-SHIRTadmin"].includes(appProps.router.pathname)) || (["/AddProduct"].includes(appProps.router.pathname)))) { 
   return (
-    <Layout>
+    <>
       <Component {...pageProps} />{" "}
-    </Layout>
+    </>
   );
 } 
-else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) ||(["/AllProducts"].includes(appProps.router.pathname)) ||(["/jeans"].includes(appProps.router.pathname))||(["/shoes"].includes(appProps.router.pathname))||(["/T-SHIRT"].includes(appProps.router.pathname))|| (["/Profile"].includes(appProps.router.pathname))|| (["/Card"].includes(appProps.router.pathname)))   
+else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) || (["/contact"].includes(appProps.router.pathname))||(["/AllProducts"].includes(appProps.router.pathname)) ||(["/jeans"].includes(appProps.router.pathname))||(["/shoes"].includes(appProps.router.pathname))||(["/T-SHIRT"].includes(appProps.router.pathname))|| (["/Profile"].includes(appProps.router.pathname))|| (["/Card"].includes(appProps.router.pathname)))   
     return (
       <Layout>
         <Component {...pageProps} />{" "}
