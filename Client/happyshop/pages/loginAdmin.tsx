@@ -8,7 +8,7 @@ function loginAdmin() {
     const SignInAdmin=(body)=>{
         axios.post('http://localhost:4000/users/login',body).then(res=>{
           localStorage.setItem("token", res.data)
-          window.location.href='/HomeAdmin'
+          window.location.href='/AllProductAdmin'
   
         }
         ).catch(err=>alert(err)

@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <div className="container-fluid bg-dark mb-30">
       <meta charSet="utf-8" />
-      <title>MultiShop - Online Shop Website Template</title>
+      <title>Happy-Shop</title>
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       <meta content="Free HTML Templates" name="keywords" />
       <meta content="Free HTML Templates" name="description" />
@@ -43,15 +43,7 @@ export default function Navbar() {
           <div className="col-lg-6 d-none d-lg-block"></div>
           <div className="col-lg-6 text-center text-lg-right">
             <div className="d-inline-flex align-items-center d-block d-lg-none">
-              <a href="" className="btn px-0 ml-2">
-                <i className="fas fa-heart text-dark" />
-                <span
-                  className="badge text-dark border border-dark rounded-circle"
-                  style={{ paddingBottom: 2 }}
-                >
-                  0
-                </span>
-              </a>
+
               <Link href="/Card">
                 <i className="fas fa-shopping-cart text-dark" />
                 <span
@@ -65,49 +57,18 @@ export default function Navbar() {
           </div>
         </div>
         <div className="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
-          <div className="col-lg-4">
+          <div className="col-lg-4" >
             <a href="" className="text-decoration-none">
               <span className="h1 text-uppercase text-primary bg-dark px-2">
-                Multi
+                Happy
               </span>
               <span className="h1 text-uppercase text-dark bg-primary px-2 ml-n1">
                 Shop
               </span>
             </a>
           </div>
-          <div className="col-lg-4 col-6 text-left">
-            <form action="">
-              <div className="input-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search for products"
-                />
-                <div className="input-group-append">
-                  <span className="input-group-text bg-transparent text-primary">
-                    <i className="fa fa-search" />
-                  </span>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div className="col-lg-4 col-6 text-right">
-            <button
-              type="button"
-              className="btn btn-sm btn-light dropdown-toggle"
-              data-toggle="dropdown"
-            >
-              My Account
-            </button>
-            <div className="dropdown-menu dropdown-menu-right">
-              <button className="dropdown-item" type="button">
-                Sign in
-              </button>
-              <button className="dropdown-item" type="button">
-                Sign up
-              </button>
-            </div>
-          </div>
+        
+          
         </div>
       </div>
       <div className="row px-xl-5">
@@ -122,7 +83,7 @@ export default function Navbar() {
           <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
             <a href="" className="text-decoration-none d-block d-lg-none">
               <span className="h1 text-uppercase text-dark bg-light px-2">
-                Multi
+              Happy
               </span>
               <span className="h1 text-uppercase text-light bg-primary px-2 ml-n1">
                 Shop
@@ -150,24 +111,18 @@ export default function Navbar() {
                 <Link href="/Profile" className="nav-item nav-link">
                   Profile
                 </Link>
+                <Link href="/contact" className="nav-item nav-link">
+                  Contact
+                </Link>
               </div>
               <div className="navbar-nav ml-auto py-0 d-none d-lg-block">
-                <a href="" className="btn px-0">
-                  <i className="fas fa-heart text-primary" />
-                  <span
-                    className="badge text-secondary border border-secondary rounded-circle"
-                    style={{ paddingBottom: 2 }}
-                  >
-                    0
-                  </span>
-                </a>
-                <a href="" className="btn px-0 ml-3">
+                <a href="/Card" className="btn px-0 ml-3">
                   <i className="fas fa-shopping-cart text-primary" />
                   <span
                     className="badge text-secondary border border-secondary rounded-circle"
                     style={{ paddingBottom: 2 }}
                   >
-                    0
+
                   </span>
                 </a>
               </div>

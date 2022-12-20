@@ -262,28 +262,4 @@ a {
 }
 .active1{
   margin-top: 80px;
-}
 
-
-.wadi3{ 
-  padding-left:20px ;
-  margin-left: 80%;
-  margin-top: -30%;
-padding: 5px 10px;
-display: block
-}
-button{
-  display: inline-block;
-  outline: 0;
-  border: none;
-  padding: 0 20px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 7px;
-  background-color: #37bad4;
-  color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 16px;
-  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
-  margin-left: 61%;
-}

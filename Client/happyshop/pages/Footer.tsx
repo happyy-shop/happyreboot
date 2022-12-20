@@ -59,11 +59,7 @@ export default function Footer() {
               </div>
               <div className="col-md-6 item text"></div>
 
-              <h3>Happy Shop</h3>
-              <p>
-                Happy Shop includes everything you need to select your new
-                perfect style
-              </p>
+             
             </div>
           </div>
         </footer>
