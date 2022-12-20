@@ -42,6 +42,7 @@ export default function Navbar() {
         <div className="row bg-secondary py-1 px-xl-5">
           <div className="col-lg-6 d-none d-lg-block"></div>
           <div className="col-lg-6 text-center text-lg-right">
+            
             <div className="d-inline-flex align-items-center d-block d-lg-none">
 
               <Link href="/Card">
@@ -57,22 +58,13 @@ export default function Navbar() {
           </div>
         </div>
         <div className="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
-          <div className="col-lg-4" >
-            <a href="" className="text-decoration-none">
-              <span className="h1 text-uppercase text-primary bg-dark px-2">
-                Happy
-              </span>
-              <span className="h1 text-uppercase text-dark bg-primary px-2 ml-n1">
-                Shop
-              </span>
-            </a>
-          </div>
-        
-          
         </div>
       </div>
       <div className="row px-xl-5">
         <div className="col-lg-3 d-none d-lg-block">
+        <img src="https://res.cloudinary.com/dqmhtibfm/image/upload/c_scale,h_65,w_80/v1671530716/NEWNEW_hplhen.png"
+            className="imgg"
+             />
           <nav
             className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light"
             id="navbar-vertical"
@@ -97,11 +89,14 @@ export default function Navbar() {
             >
               <span className="navbar-toggler-icon" />
             </button>
+            
             <div
               className="collapse navbar-collapse justify-content-between"
               id="navbarCollapse"
             >
+              
              <div className="navbar-nav mr-auto py-0">
+             
                 <Link href="/Home" className="nav-item nav-link">
                   Home
                 </Link>
