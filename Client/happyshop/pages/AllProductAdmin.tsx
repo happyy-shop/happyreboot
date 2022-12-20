@@ -52,7 +52,9 @@ export default function AllProducts({ data }) {
       <Link href="AddProduct">
         <button className="button_add1">Add Product </button>
       </Link>
-
+      <Link href="AllUsers">
+        <button className="button_add2">All Users </button>
+      </Link>
       <div className="grid-container">
         {data.map((element: any) => {
           return (

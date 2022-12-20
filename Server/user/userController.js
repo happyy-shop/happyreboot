@@ -112,7 +112,19 @@ exports.updateUser = async (req, res) => {
     res.status(500).send(error);
   }
   
-}; 
+}
+
+exports.deleteOneUser = async (req, res) => {
+  const id = req.params.id;
+  // console.log(req.params);
+  try {
+    const deleted = await users.findByIdAndDelete(id);
+    res.status(204).send(deleted);
+    return;
+  } catch (err) {
+    res.status(500).send(err);
+  }
+};; 
 
  
 // const login = async (req, res)=> {
@@ -221,3 +233,6 @@ exports.updateUser = async (req, res) => {
 // };
 
 // module.exports = { register, login, getAll , findOneUser };
+
+
+
