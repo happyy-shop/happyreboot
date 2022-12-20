@@ -45,42 +45,38 @@ function Profile ({ Component, pageProps, ...appProps }: AppProps)   {
                   alt="..."
                 />
               </div>
-               <div className="col-lg-6 px-xl-10">
+              <div className="col-lg-6 px-xl-10">
                 <ul className="list-unstyled mb-1-9">
                   <li className="mb-2 mb-xl-3 display-28">
                     <span className="display-26 text-secondary me-2 font-weight-600">
                       Position:
                     </span>{" "}
-                    a
+                    {user.username}
                   </li>
                   <li className="mb-2 mb-xl-3 display-28">
                     <span className="display-26 text-secondary me-2 font-weight-600">
                       Experience:
                     </span>{" "}
-                    10 Years 
-                  </li> 
-
-
-                
+                    10 Years
+                  </li>
                   <li className="mb-2 mb-xl-3 display-28">
                     <span className="display-26 text-secondary me-2 font-weight-600">
                       Email:
                     </span>{" "}
-                    b 
+                    {user.email}
                   </li>
                   <li className="mb-2 mb-xl-3 display-28">
                     <span className="display-26 text-secondary me-2 font-weight-600">
                       Website:
                     </span>{" "}
-                    www.example.com 
+                    www.example.com
                   </li>
                   <li className="display-28">
                     <span className="display-26 text-secondary me-2 font-weight-600">
                       Phone:
                     </span>{" "}
-                    507 - 541 - 457 
+                    507 - 541 - 4567
                   </li>
-                  
                 </ul>
                 <ul className="social-icon-style1 list-unstyled mb-0 ps-0">
                   <li>
@@ -104,18 +100,9 @@ function Profile ({ Component, pageProps, ...appProps }: AppProps)   {
                     </a>
                   </li>
                 </ul>
-
               </div>
-              <div className='wadi3'>
-             <input ></input>
-            <input className='inputs'></input>
-            <input className='inputs'></input>
-            <input className='inputs'></input>
-            <input className='inputs'></input>
-            </div>
             </div>
           </div>
-          <button>update</button>
         </div>
       </div>
     </div>
