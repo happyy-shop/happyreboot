@@ -7,7 +7,10 @@ let userSchema = mongoose.Schema({
   email: { type: String },
   password: { type: String },
   admin: { type: Boolean, default: false },
-  image: {type:String}, 
+  image: {type:String, default: "https://bootdey.com/img/Content/avatar/avatar7.png"}, 
+  age: {type: Number, default:18 },
+  Phone: {type: Number, default: 11111111 },
+
 });
 
 module.exports = mongoose.model("user", userSchema);
