@@ -5,8 +5,10 @@ import jwt from 'jwt-decode'
 function loginAdmin() {
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
+    const instance= axios.create()
+
     const SignInAdmin=(body)=>{
-        axios.post('http://localhost:4000/users/login',body).then(res=>{
+        instance.post('http://localhost:4000/users/login',body).then(res=>{
           localStorage.setItem("token", res.data)
           window.location.href='/AllProductAdmin'
   

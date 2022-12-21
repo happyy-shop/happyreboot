@@ -7,8 +7,10 @@ const Signup = () => {
     const [username,setUsername]=useState('')
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
+    const instance= axios.create()
+
     const signup=(body:any)=>{
-        axios.post('http://localhost:4000/users/register',body).then(res=>{
+        instance.post('http://localhost:4000/users/register',body).then(res=>{
           localStorage.setItem("token", res.data)
           window.location.href='/Home'
 
