@@ -84,7 +84,7 @@ export default function AllProducts({ data }) {
                       </li> */}
                       <Link href={"/edit/id"} as={`edit/${element._id}`}>
                         <li>
-                          <a href="#" data-tip="edit">
+                          <a href="/edit/id" data-tip="edit">
                             <i className="fa fa-search" />
                           </a>
                         </li>

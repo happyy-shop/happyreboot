@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import NavbarAdmin from "../../NavbarAdmin";
-import Footer from "../../Footer";
+import NavbarAdmin from "../NavbarAdmin";
+import Footer from "../Footer";
 
 const Test = () => {
   const router = useRouter();
@@ -16,7 +16,7 @@ const Test = () => {
   console.log(data);
   //   console.log(id);
   useEffect(() => {
-    if (router.isReady) {
+    if (router.isReady) {   
       // Code using query)
 
       console.log(router.query.id);
