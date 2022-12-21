@@ -3,11 +3,11 @@ import React,{useState} from 'react'
 import axios from 'axios'
 import jwt from 'jwt-decode'
 import Link from 'next/link'
-const signup = () => {
+const Signup = () => {
     const [username,setUsername]=useState('')
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
-    const signup=(body)=>{
+    const signup=(body:any)=>{
         axios.post('http://localhost:4000/users/register',body).then(res=>{
           localStorage.setItem("token", res.data)
           window.location.href='/Home'
@@ -101,7 +101,7 @@ const signup = () => {
   )
 }
 
-export default signup
+export default Signup
 
 // import React, { useState } from "react";
 // import { useRouter } from "next/router";

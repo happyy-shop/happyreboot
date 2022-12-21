@@ -66,6 +66,7 @@ exports.login = async function (req, res, next) {
 
     if (user && (await bcrypt.compare(password, user.password))) {
       // Create token
+      console.log('test login');
       const token = jwt.sign(
         {  email },
         "my_security_key",
@@ -87,8 +88,8 @@ exports.login = async function (req, res, next) {
   // Our register logic ends here
   };
   exports.findOneUser = async (req, res) => {
-    const oneUser = await users.findOne({ email: req.params.email });
-    try {
+    try {    
+      const oneUser = await users.findOne({ email: req.params.email });
       res.status(201).send(oneUser);
     } catch (err) {
       res.status(500).json(err);
@@ -105,9 +106,11 @@ exports.login = async function (req, res, next) {
     }
   };
 exports.updateUser = async (req, res) => {
+  console.log("==========",req.params.id);
   const update = await users.findByIdAndUpdate(req.params.id, req.body);
   try {
     res.status(201).send(update);
+    console.log("updated");
   } catch (error) {
     res.status(500).send(error);
   }
