@@ -50,7 +50,7 @@ else if(user.admin==true && ( (["/AllUsers"].includes(appProps.router.pathname))
     </>
   );
 } 
-else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) || (["/contact"].includes(appProps.router.pathname))||(["/AllProducts"].includes(appProps.router.pathname)) ||(["/jeans"].includes(appProps.router.pathname))||(["/shoes"].includes(appProps.router.pathname))||(["/T-SHIRT"].includes(appProps.router.pathname))|| (["/Profile"].includes(appProps.router.pathname))|| (["/Card"].includes(appProps.router.pathname)))   
+else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) ||(["/[id]"].includes(appProps.router.pathname)) || (["/contact"].includes(appProps.router.pathname))||(["/AllProducts"].includes(appProps.router.pathname)) ||(["/jeans"].includes(appProps.router.pathname))||(["/shoes"].includes(appProps.router.pathname))||(["/T-SHIRT"].includes(appProps.router.pathname))|| (["/Profile"].includes(appProps.router.pathname))|| (["/Card"].includes(appProps.router.pathname)))   
     return (
       <Layout>
         <Component {...pageProps} />{" "}
