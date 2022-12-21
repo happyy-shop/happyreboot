@@ -43,7 +43,7 @@ useEffect (()=> {
 
   const getContent = () => {
     if (!user && (["/"].includes(appProps.router.pathname))  ||(["/loginUser"].includes(appProps.router.pathname))  ||(["/loginAdmin"].includes(appProps.router.pathname))){ return <Component {...pageProps} />;}
-else if(user.admin==true && ( (["/HomeAdmin"].includes(appProps.router.pathname)) || (["/AllProductAdmin"].includes(appProps.router.pathname)) || (["/jeansadmin"].includes(appProps.router.pathname))  || (["/shoesadmin"].includes(appProps.router.pathname)) || (["/T-SHIRTadmin"].includes(appProps.router.pathname)) || (["/AddProduct"].includes(appProps.router.pathname)))) { 
+else if(user.admin==true && ( (["/AllUsers"].includes(appProps.router.pathname)) ||(["/HomeAdmin"].includes(appProps.router.pathname)) || (["/AllProductAdmin"].includes(appProps.router.pathname)) || (["/jeansadmin"].includes(appProps.router.pathname))  || (["/shoesadmin"].includes(appProps.router.pathname)) || (["/T-SHIRTadmin"].includes(appProps.router.pathname)) || (["/AddProduct"].includes(appProps.router.pathname)))) { 
   return (
     <>
       <Component {...pageProps} />{" "}

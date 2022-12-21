@@ -26,7 +26,9 @@ const Signup = () => {
       
   {/*//** Banner** //*/}
   <section className='welecom'>
-    
+  <img src="https://res.cloudinary.com/dqmhtibfm/image/upload/c_scale,h_135,w_135/v1671530716/NEWNEW_hplhen.png"
+            className="imgg"
+             />
     <div className="container">
       <div className="row">
         {/* Introduction */}
