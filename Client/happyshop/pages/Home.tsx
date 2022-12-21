@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 export default function Home() {
@@ -12,15 +13,7 @@ export default function Home() {
         className="carousel slide carousel-fade mb-30 mb-lg-0"
         data-ride="carousel"
       >
-        <ol className="carousel-indicators">
-          <li
-            data-target="#header-carousel"
-            data-slide-to={0}
-            className="active"
-          />
-          <li data-target="#header-carousel" data-slide-to={1} />
-          <li data-target="#header-carousel" data-slide-to={2} />
-        </ol>
+        
         <div className="carousel-inner">
           <div
             className="carousel-item position-relative active"
@@ -126,7 +119,7 @@ export default function Home() {
 </div>
 
     <div>
-    <div className="container-fluid pt-5 pb-3">
+    <center><div className="container-fluid pt-5 pb-3">
   <h2 className="section-title position-relative text-uppercase mx-xl-5 mb-4">
     <span className="bg-secondary pr-3">Featured Products</span>
   </h2>
@@ -134,7 +127,7 @@ export default function Home() {
     <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
       <div className="product-item bg-light mb-4">
         <div className="product-img position-relative overflow-hidden">
-          <img className="img-fluid w-100" src="img/product-1.jpg" alt="" />
+          <img className="img-fluid w-100" src="https://th.bing.com/th/id/OIP.rQMhJ3xr8TvimbF85UXdSgHaHa?pid=ImgDet&rs=1" alt="" />
         </div>
         <div className="text-center py-4">
           <a className="h6 text-decoration-none text-truncate" href="">
@@ -152,7 +145,7 @@ export default function Home() {
     <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
       <div className="product-item bg-light mb-4">
         <div className="product-img position-relative overflow-hidden">
-          <img className="img-fluid w-100" src="img/product-2.jpg" alt="" />
+          <img className="img-fluid w-100" src="https://cdn.raffaello-network.com/english/fashion-details/497377/2574/off-white-virgil-abloh-mens-shoes_offms-0mia102r198000010120-large-1.jpg" alt="" />
         </div>
         <div className="text-center py-4">
           <a className="h6 text-decoration-none text-truncate" href="">
@@ -167,16 +160,17 @@ export default function Home() {
         </div>
       </div>
     </div>
+    
     <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
       <div className="product-item bg-light mb-4">
         <div className="product-img position-relative overflow-hidden">
-          <img className="img-fluid w-100" src="img/product-3.jpg" alt="" />
+          <img className="img-fluid w-100" src="https://www.3suisses.fr/media/produits/3su/adidas-performance/img/264535993-zoom_prd_3s_1140x1140.jpg" alt="" />
          
         </div>
         <div className="text-center py-4">
-          <a className="h6 text-decoration-none text-truncate" href="">
+        <Link href="/T-SHIRT" className="nav-item nav-link">   <a className="h6 text-decoration-none text-truncate" href="">
           T-SHIRT
-          </a>
+          </a></Link>
           <div className="d-flex align-items-center justify-content-center mt-2">
             <h5>$80.00</h5>
             <h6 className="text-muted ml-2">
@@ -185,12 +179,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </div> 
    
    
    
   </div>
-</div>
+</div></center>
 
             </div>
     <div className="container-fluid pt-5">
