@@ -85,6 +85,7 @@ export default function AllProducts({ data }) {
                       <Link href={"/indexx/:id"} as={`indexx/${element._id}`}>
                         <li>
                           <a href="indexx" data-tip="edit">
+
                             <i className="fa fa-search" />
                           </a>
                         </li>

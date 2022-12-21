@@ -20,11 +20,11 @@ import Layout from './layout'
 import jwt from 'jwt-decode'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-export default function App({ Component, pageProps, ...appProps }: AppProps)  {
-  const[user,setUser]=useState('')
+export default function App({ Component, pageProps, ...appProps }: AppProps) {
+  const [user, setUser] = useState('')
   console.log(user)
-useEffect (()=> { 
-  const token = localStorage.getItem("token");
+  useEffect(() => {
+    const token = localStorage.getItem("token");
     if (token) {
       const user = jwt(token);
 
@@ -38,24 +38,30 @@ useEffect (()=> {
           });
       }
     }
-  },[])
+  }, [])
 
 
   const getContent = () => {
-    if (!user && (["/"].includes(appProps.router.pathname))  ||(["/loginUser"].includes(appProps.router.pathname))  ||(["/loginAdmin"].includes(appProps.router.pathname))){ return <Component {...pageProps} />;}
-else if(user.admin==true && ( (["/AllUsers"].includes(appProps.router.pathname)) ||(["/HomeAdmin"].includes(appProps.router.pathname)) || (["/AllProductAdmin"].includes(appProps.router.pathname)) || (["/jeansadmin"].includes(appProps.router.pathname))  || (["/shoesadmin"].includes(appProps.router.pathname)) || (["/T-SHIRTadmin"].includes(appProps.router.pathname)) || (["/AddProduct"].includes(appProps.router.pathname)))) { 
-  return (
-    <>
-      <Component {...pageProps} />{" "}
-    </>
-  );
-} 
-else if (user.admin==false &&(["/Home"].includes(appProps.router.pathname)) ||(["/[id]"].includes(appProps.router.pathname)) || (["/contact"].includes(appProps.router.pathname))||(["/AllProducts"].includes(appProps.router.pathname)) ||(["/jeans"].includes(appProps.router.pathname))||(["/shoes"].includes(appProps.router.pathname))||(["/T-SHIRT"].includes(appProps.router.pathname))|| (["/Profile"].includes(appProps.router.pathname))|| (["/Card"].includes(appProps.router.pathname)))   
-    return (
-      <Layout>
-        <Component {...pageProps} />{" "}
-      </Layout>
-    );
+    if (!user && (["/edit/[id]"].includes(appProps.router.pathname)) || (["/"].includes(appProps.router.pathname)) || (["/loginUser"].includes(appProps.router.pathname)) || (["/loginAdmin"].includes(appProps.router.pathname))) {
+      
+
+      return <Component {...pageProps} />;
+    }
+    else if (user.admin == true && ((["/AllUsers"].includes(appProps.router.pathname)) || (["/HomeAdmin"].includes(appProps.router.pathname)) || (["/AllProductAdmin"].includes(appProps.router.pathname)) || (["/jeansadmin"].includes(appProps.router.pathname)) || (["/shoesadmin"].includes(appProps.router.pathname)) || (["/T-SHIRTadmin"].includes(appProps.router.pathname)) || (["/AddProduct"].includes(appProps.router.pathname)) || (["/edit/[id]"].includes(appProps.router.pathname)))) {
+
+      return (
+        <>
+          <Component {...pageProps} />{" "}
+        </>
+      );
+    }
+    else if (user.admin == false && (["/Home"].includes(appProps.router.pathname)) || (["/contact"].includes(appProps.router.pathname)) || (["/AllProducts"].includes(appProps.router.pathname)) || (["/jeans"].includes(appProps.router.pathname)) || (["/shoes"].includes(appProps.router.pathname)) || (["/T-SHIRT"].includes(appProps.router.pathname)) || (["/Profile"].includes(appProps.router.pathname)) || (["/Card"].includes(appProps.router.pathname)) || (["/[id]"].includes(appProps.router.pathname)))
+      return (
+        <Layout>
+          <Component {...pageProps} />{" "}
+        </Layout>
+      );
+
   };
 
   return getContent()

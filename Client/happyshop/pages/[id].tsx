@@ -75,7 +75,7 @@ export default function ProductDetails({ singleProduct }: any) {
 
   return (
     <div>
-      <Navbar />
+     
 
       <main className="prod-info">
         <div className="left">
@@ -159,7 +159,7 @@ export default function ProductDetails({ singleProduct }: any) {
                   router.push("/Card");
                 }}
               >
-                ADD TO CARD
+                ADD TO CART
               </button>
             </div>
           </div>
