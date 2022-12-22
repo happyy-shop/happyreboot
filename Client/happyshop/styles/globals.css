@@ -245,20 +245,23 @@ a {
   cursor: not-allowed;
 }
 .welecom{ 
-  background-color: beige;
+  height: 700px;
+  background-color: rgb(255, 255, 255);
   color: black;
+  background-image: url("https://www.modernfellows.com/wp-content/uploads/2022/01/Fast-Fashion-4.jpg")
 }
 .signup{ 
+ margin-bottom:200px; 
+ margin-left: 34%;
+ margin-top: 20px;
+ min-height: 300px;
   width: 500px;
-  min-height: 300px;
-  margin: auto;
-  margin-top: 10px;
   border: 1px solid #77777769;
-  background-color: #fdfdfd;
+  background-color: rgb(194, 194, 184);
   border-radius: 10px;
   padding: 20px 60px;
   box-shadow: 0 0 1em #80808066;
-  margin-left: 700px;
+  
 }
 .active1{
   margin-top: 80px;
@@ -323,6 +326,37 @@ margin-left: 2%;
   width: 60%;
   margin-left: 20%;
 }
+.inputss{
+  margin-bottom:3%;
+  margin-top: 2%;
+  border-radius: 5px;
+  width: 60%;
+  height: 40px
 
+}
+
+.name{
+  font-family: "Josefin Sans",sans-serif;
+    color: #8e8e8e;
+    margin-top: 0px;
+    font-style: normal;
+    font-weight: 900;
+    text-transform: normal;
+    margin-left: 3%;
+}
+.bar{
+  background-color: rgb(0, 0, 0);
+  width: 1520px;
+  height: 120px;
+  border: 1px solid #77777769;
+  box-shadow: 0 0 1em #80808066;
+}
+.foot{
+  background-color: rgb(0, 0, 0);
+  width: 1520px;
+  height: 120px;
+  border: 1px solid #77777769;
+  box-shadow: 0 0 1em #80808066;
+}
 
 

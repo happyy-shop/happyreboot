@@ -75,8 +75,6 @@ export default function ProductDetails({ singleProduct }: any) {
 
   return (
     <div>
-     
-
       <main className="prod-info">
         <div className="left">
           <img
