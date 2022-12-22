@@ -7,7 +7,7 @@ import { GetStaticProps } from "next";
 import Link from "next/link";
 import axios from "axios";
 import Sidebar from "./sidebar";
-import Search from "./Search";
+// import Search from "./Search";
 
 export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch("http://localhost:4000/product");
@@ -24,6 +24,8 @@ export default function AllProducts({ dataApi }) {
   const [data, setData] = useState(dataApi);
   const [cartProducts, setCartProducts] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
+  const [search, setSearch] = useState([]);
+  const [searchItem, setSearchItem] = useState("");
 
   console.log(cartProducts);
 
@@ -57,13 +59,50 @@ export default function AllProducts({ dataApi }) {
     setId(GetId);
   }, []);
 
-  console.log("testtt", id);
+  const searchProduct = () => {
+    if (searchItem === "") {
+      return Axios.get("http://localhost:4000/product/").then((res) => {
+        setSearch(res.data);
+        // console.log(res.data);
+
+      });
+
+    }
+    setSearch((data:any) => {
+      return data.filter((search) => {
+        return search.productName.toLowerCase().includes(searchItem.toLowerCase());
+      });
+    });
+    
+  };
+  
+
+  // console.log("testtt", id);
 
   return (
     <div>
-      <Search/>
+      <div className="w-100 d-flex justify-content-center  ">
+        <div className="input-group  w-50 m-0 my-5 ">
+          <input
+            type="search"
+            className="form-control rounded"
+            placeholder="Search for products"
+            aria-label="Search"
+            aria-describedby="search-addon"
+            onChange={(e) => setSearchItem(e.target.value)}
+          />
+
+          <button
+            type="button"
+            className="btn btn-outline-primary"
+            onClick={searchProduct}
+          >
+            Search
+          </button>
+        </div>
+      </div>
       <div className="grid-container">
-      <Sidebar setData={setData} />{" "}
+        <Sidebar setData={setData} />{" "}
         {data?.map((element: any) => {
           return (
             <div className="row" key={element.id}>

@@ -79,6 +79,7 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
           <Component {...pageProps} />{" "}
         </Layout>
       );
+
   };
 
   return getContent();

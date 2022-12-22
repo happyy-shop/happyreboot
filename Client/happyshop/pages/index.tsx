@@ -1,10 +1,8 @@
 import Footer from "./Footer";
-
 import React, { useState } from "react";
 import axios from "axios";
 import jwt from "jwt-decode";
 import Link from "next/link";
-
 const signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -106,5 +104,4 @@ const signup = () => {
     </>
   );
 };
-
 export default signup;

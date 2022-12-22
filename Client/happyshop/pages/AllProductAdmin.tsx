@@ -82,9 +82,10 @@ export default function AllProducts({ data }) {
                           <i className="fa fa-random" />
                         </a>
                       </li> */}
-                      <Link href={"/edit/id"} as={`edit/${element._id}`}>
+                      <Link href={"/indexx/:id"} as={`indexx/${element._id}`}>
                         <li>
-                          <a href="/edit/id" data-tip="edit">
+                          <a href="indexx" data-tip="edit">
+
                             <i className="fa fa-search" />
                           </a>
                         </li>
