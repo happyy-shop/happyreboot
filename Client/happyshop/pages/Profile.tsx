@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function Profile({ Component, pageProps, ...appProps }: AppProps) {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState("");
   const [image, setImage] = useState("");
   const [username, setUserName] = useState("");
   const [age, setAge] = useState("");

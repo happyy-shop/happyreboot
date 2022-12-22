@@ -1,109 +1,104 @@
+import React, { useState } from "react";
+import axios from "axios";
+import jwt from "jwt-decode";
+import Link from "next/link";
+const signup = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const signup = (body: any) => {
+    axios
+      .post("http://localhost:4000/users/register", body)
+      .then((res) => {
+        localStorage.setItem("token", res.data);
+        window.location.href = "/Home";
+      })
+      .catch((err) => alert(err));
+  };
 
-import React,{useState} from 'react'
-import axios from 'axios'
-import jwt from 'jwt-decode'
-import Link from 'next/link'
-const Signup = () => {
-    const [username,setUsername]=useState('')
-    const [email,setEmail]=useState('')
-    const [password,setPassword]=useState('')
-    const instance= axios.create()
-
-    const signup=(body:any)=>{
-        instance.post('http://localhost:4000/users/register',body).then(res=>{
-          localStorage.setItem("token", res.data)
-          window.location.href='/Home'
-
-        } ).catch(err=>alert(err)
-        )
-    } 
-   
-   
   return (
     <>
- 
+      {/*//** Banner** //*/}
+      <section className="welecom">
+        <div className="container">
+          <div className="row">
+            {/* Introduction */}
+            <div className="col-md-6 ccol-4">
+              <h1>Happy-Shop</h1>
+            </div>
+            {/* Sign Up */}
+            <center>
+              {" "}
+              <div className="signup">
+                {/* <form className="signup-form"> */}
+                <h2 className="text-center">Signup Now</h2>
 
-      
-  {/*//** Banner** //*/}
-  <section className='welecom'>
-  <img src="https://res.cloudinary.com/dqmhtibfm/image/upload/c_scale,h_135,w_135/v1671530716/NEWNEW_hplhen.png"
-            className="imgg"
-             />
-    <div className="container">
-      <div className="row">
-        {/* Introduction */}
-        <div  className="col-md-6 ccol-4">
-          <h1>Happy-Shop</h1>
-
-          
+                <div className="form-group">
+                  <input
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="email"
+                    className="form-control"
+                    placeholder="Email Address"
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    onChange={(e) => setUsername(e.target.value)}
+                    type="text"
+                    className="form-control"
+                    placeholder="User Name"
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    onChange={(e) => setPassword(e.target.value)}
+                    type="text"
+                    className="form-control"
+                    placeholder="Password"
+                  />
+                </div>
+                <div className="form-group text-center">
+                  <button
+                    onClick={() => signup({ username, password, email })}
+                    className="btn btn-outline-light"
+                  >
+                    SignUp
+                  </button>
+                </div>
+                <div className="active1">
+                  {" "}
+                  <h4>already have an account ?</h4>
+                  <button>
+                    <Link href="/loginUser">Login User</Link>
+                  </button>
+                  <button>
+                    <Link href="/loginAdmin">Login Admin</Link>
+                  </button>
+                </div>
+              </div>
+            </center>
+            <img
+              src="https://res.cloudinary.com/dqmhtibfm/image/upload/c_scale,h_600,w_1940/v1670924684/aka/hero/hero-2_j083pl.jpg"
+              alt="image1"
+            />
+          </div>
         </div>
-        {/* Sign Up */}
-      <center>  <div className="signup">
-          {/* <form className="signup-form"> */}
-           <h2 className="text-center">Signup Now</h2>
-           
-            <div className="form-group">
-              <input
-              onChange={e=>setEmail(e.target.value)}
-                type="email"
-                className="form-control"
-                placeholder="Email Address"
-               
-              />
-            </div>
-            <div className="form-group">
-              <input
-              onChange={e=>setUsername(e.target.value)}
+      </section>
 
-                type="text"
-                className="form-control"
-                placeholder="User Name"
-               
-              />
-            </div>
-            <div className="form-group">
-              <input
-              onChange={e=>setPassword(e.target.value)}
-
-                type="text"
-                className="form-control"
-                placeholder="Password"
-               
-              />
-            </div>
-            <div className="form-group text-center">
-              <button onClick={()=>signup({username,password,email})} className="btn btn-outline-light">
-                SignUp
-              </button>  
-            </div>
-            <div className='active1'> <h4>already have an account ?</h4><button >
-                  <Link href="/loginUser">Login User</Link>
-                </button> 
-                <button >
-                  <Link href="/loginAdmin">Login Admin</Link>
-                </button></div> 
-        </div> 
-        </center> 
-        <img src="https://res.cloudinary.com/dqmhtibfm/image/upload/c_scale,h_600,w_1940/v1670924684/aka/hero/hero-2_j083pl.jpg" alt="image1"/>
-      </div>
-    </div>
-  </section>
-  
-  {/*======================================== 
+      {/*======================================== 
 
      Modal
 
     ========================================*/}
-  {/* Modal */}
-  
-  {/* jQuery (necessary for Bootstrap's JavaScript plugins) */}
-  {/* Include all compiled plugins (below), or include individual files as needed */}
-</>
+      {/* Modal */}
 
-  )
-}
+      {/* jQuery (necessary for Bootstrap's JavaScript plugins) */}
+      {/* Include all compiled plugins (below), or include individual files as needed */}
+    </>
+  );
+};
 
-export default Signup
+export default signup;
 
 // import React, { useState } from "react";
 // import { useRouter } from "next/router";
