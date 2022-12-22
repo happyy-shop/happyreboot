@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { GetStaticProps } from "next";
@@ -101,7 +103,8 @@ export default function AllProducts({ dataApi }) {
             </div>
           );
         })}
-      </div> 
+      </div>
+      {/* <Footer /> */}
     </div>
   );
 }
